@@ -68,12 +68,21 @@ public class index {
     }
 
     @RequestMapping(value = "/login/validasi", method = RequestMethod.POST)
-    public String validasi(@ModelAttribute("data_admin") data_admin data_admin) {
+    public String validasi(@ModelAttribute("data_admin") data_admin data_admin,  @RequestParam("username") String user1,
+                           @RequestParam("password") String pass1) {
+         String user2 = "udin";
+         String pass2 ="123";
+         String admin_siapa = "admin";
+//        if (login_admin(data_admin.getUsername(),data_admin.getPassword()) == 1)
+//        {
+//            //admin
+//            return "redirect:/login?berhasil=login&kodene=" + admin_siapa(data_admin.getUsername(),data_admin.getPassword()) + "&jenenge=" + data_admin.getUsername() + "&siapa=Administrator";
+//        }
 
-        if (login_admin(data_admin.getUsername(),data_admin.getPassword()) == 1)
+        if ( user1.equals(user2) && pass1.equals(pass2))
         {
             //admin
-            return "redirect:/login?berhasil=login&kodene=" + admin_siapa(data_admin.getUsername(),data_admin.getPassword()) + "&jenenge=" + data_admin.getUsername() + "&siapa=Administrator";
+            return "redirect:/login?berhasil=login&kodene=" + admin_siapa + "&jenenge=" + user2 + "&siapa=Administrator";
         }
         else
         {
