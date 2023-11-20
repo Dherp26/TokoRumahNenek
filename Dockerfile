@@ -1,5 +1,6 @@
 FROM eclipse-temurin:16
-VOLUME /tmp
-COPY target/*.jar app.jar
+ARG JAR_FILE=tmp/*.jar
+COPY ${JAR_FILE} app.jar
 ENTRYPOINT ["java","-jar","/app.jar"]
 EXPOSE 8080
+
