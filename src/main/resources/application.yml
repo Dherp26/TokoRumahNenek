@@ -18,7 +18,7 @@ spring:
           use_query_cache: false
           use_second_level_cache: false
         hbm2ddl:
-          auto: none
+          auto: auto
     database: postgresql
     show-sql: false
   datasource:
