@@ -12,6 +12,7 @@ import java.util.UUID;
 @Entity
 public class data_leave {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String id_leave;
     private String nip;
     private String tanggal;
