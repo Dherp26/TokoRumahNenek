@@ -12,6 +12,7 @@ import java.util.UUID;
 @Entity
 public class data_admin {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String id_admin;
     private String nama;
     private String username;
