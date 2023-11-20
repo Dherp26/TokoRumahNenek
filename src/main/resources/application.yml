@@ -9,7 +9,7 @@ spring:
     database-platform: org.hibernate.dialect.PostgreSQLDialect
     properties:
       hibernate:
-        default_schema: app
+        default_schema: public
         order_updates: true
         jdbc:
           batch_size: 500
@@ -18,7 +18,7 @@ spring:
           use_query_cache: false
           use_second_level_cache: false
         hbm2ddl:
-          auto: auto
+          auto: none
     database: postgresql
     show-sql: false
   datasource:
@@ -28,7 +28,7 @@ spring:
     password: FkudFA23083fe5T0peS9NiA722o78Yse
     hikari:
       pool-name: KlikPromoSpringJPAHikariCP
-      schema: app
+      schema: public
       maximum-pool-size: 10
       max-lifetime: 60000 # 1 minute wait time
       auto-commit: false
