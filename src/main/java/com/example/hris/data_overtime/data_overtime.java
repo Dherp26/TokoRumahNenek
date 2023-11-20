@@ -12,7 +12,6 @@ import java.util.UUID;
 @Entity
 public class data_overtime {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String id_overtime;
     private String nip;
     private String bulan;
