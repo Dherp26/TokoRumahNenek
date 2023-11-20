@@ -1,0 +1,45 @@
+spring:
+  lifecycle:
+    timeout-per-shutdown-phase: 30s
+  application:
+    name: toko-rumah-nenek
+    version: v1.0.0
+
+  jpa:
+    database-platform: org.hibernate.dialect.PostgreSQLDialect
+    properties:
+      hibernate:
+        default_schema: app
+        order_updates: true
+        jdbc:
+          batch_size: 500
+        generate_statistics: false
+        cache:
+          use_query_cache: false
+          use_second_level_cache: false
+        hbm2ddl:
+          auto: none
+    database: postgresql
+    show-sql: false
+  datasource:
+    type: com.zaxxer.hikari.HikariDataSource
+    url: jdbc:postgresql://dpg-cldfglngsrdc73fkts9g-a.singapore-postgres.render.com:5432/toko_rumah_nenek
+    username: toko_rumah_nenek_user
+    password: FkudFA23083fe5T0peS9NiA722o78Yse
+    hikari:
+      pool-name: KlikPromoSpringJPAHikariCP
+      schema: app
+      maximum-pool-size: 10
+      max-lifetime: 60000 # 1 minute wait time
+      auto-commit: false
+      data-source-properties:
+        reWriteBatchedInserts: true
+    tomcat:
+      test-on-borrow: true
+      test-while-idle: true
+      time-between-eviction-runs-millis: 60000
+      validation-query: SELECT 1
+server:
+  port: 8080
+  shutdown: graceful
+  max-http-header-size: 16KB
