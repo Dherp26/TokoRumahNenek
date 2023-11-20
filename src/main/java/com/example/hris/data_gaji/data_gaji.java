@@ -12,6 +12,7 @@ import java.util.UUID;
 @Entity
 public class data_gaji {
 	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String id_gaji;
     private String nip;
     private String bulan;
