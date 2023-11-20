@@ -12,7 +12,6 @@ import java.util.UUID;
 @Entity
 public class data_absensi {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String id_absensi;
     private String nip;
     private String bulan;
