@@ -12,7 +12,6 @@ import java.util.UUID;
 @Entity
 public class data_pegawai {
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private String id_pegawai;
     private String nip;
     private String nama;
