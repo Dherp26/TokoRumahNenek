@@ -25,3 +25,9 @@ Password : 123
 ########################=================================
 
 Deployed using render server(Free)
+
+
+
+
+
+Since this was using mysql on local env, but on server need to change using postgre, some features may not be working
